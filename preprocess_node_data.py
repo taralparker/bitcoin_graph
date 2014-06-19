@@ -14,7 +14,7 @@ def parse_userkey():
 	inputfile = open("userkey_list.txt", "r")
 	outputfile = open("nodes1.csv","a")
 
-	i=0
+	i = 0
 	## Property names in first row
 	outputfile.write("user:string:users\ttype\n")	
  	for line in iter(inputfile):
@@ -29,7 +29,7 @@ def parse_pubkey():
 	inputfile = open("pubkey_list.txt", "r")
 	outputfile = open("nodes2.csv","a")
 
-	i=0
+	i = 0
 	## Property names in first row
  	outputfile.write("pubkey:string:pubkeys\ttype\tkey\n")
 	for line in iter(inputfile):
@@ -46,12 +46,12 @@ def parse_transaction():
 	inputfile = open("transactionkey_list.txt", "r")
 	outputfile = open("nodes3.csv","a")
 
-	i=1
+	i = 0
 	##Property names in first row
 	outputfile.write("transaction:string:transactions\ttype\ttxn\n")
  	for line in iter(inputfile):
+		i +=1 
 		outputfile.write("Txn-"+str(i)+"\tTxnNode"+"\t"+line)	
-		i += 1
 	inputfile.close()
 	outputfile.close()
 
