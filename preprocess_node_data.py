@@ -16,7 +16,7 @@ def parse_userkey():
 
 	i = 0
 	## Property names in first row
-	outputfile.write("user:string:users\ttype\n")	
+	outputfile.write("user:string:users\tnodetype\n")	
  	for line in iter(inputfile):
 		i += 1
 		outputfile.write("User-"+str(i)+"\tUserNode\n")
@@ -31,7 +31,7 @@ def parse_pubkey():
 
 	i = 0
 	## Property names in first row
- 	outputfile.write("pubkey:string:pubkeys\ttype\tkey\n")
+ 	outputfile.write("pubkey:string:pubkeys\tnodetype\tkey\n")
 	for line in iter(inputfile):
 		i += 1
 		line = line.strip()	
@@ -48,9 +48,9 @@ def parse_transaction():
 
 	i = 0
 	##Property names in first row
-	outputfile.write("transaction:string:transactions\ttype\ttxn\n")
+	outputfile.write("transaction:string:transactions\tnodetype\ttxn\n")
  	for line in iter(inputfile):
-		i +=1 
+		i += 1 
 		outputfile.write("Txn-"+str(i)+"\tTxnNode"+"\t"+line)	
 	inputfile.close()
 	outputfile.close()
