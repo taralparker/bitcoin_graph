@@ -26,22 +26,22 @@ Move your nodes[1,2,3].csv and rels[1,2,3,4].csv files to the [batch-import](htt
 
 Here is a sample configuration for batch.properties on a 6gb machine. The import will run faster if you remove auto-indexing (batch_import.node_index.*) 
 
-dump_configuration=false
-cache_type=none
-use_memory_mapped_buffers=true
-neostore.propertystore.db.index.keys.mapped_memory=500M 
-neostore.propertystore.db.index.mapped_memory=500M
-neostore.nodestore.db.mapped_memory=200M
-neostore.relationshipstore.db.mapped_memory=3G
-neostore.propertystore.db.mapped_memory=200M
-neostore.propertystore.db.strings.mapped_memory=500M
- 
-batch_import.nodes_files=nodes1.csv,nodes2.csv,nodes3.csv
-batch_import.rels_files=rels1.csv,rels2.csv,rels3.csv,rels4.csv
- 
-batch_import.node_index.users=exact
-batch_import.node_index.transactions=exact
-batch_import.node_index.pubkeys=exact
+1. dump_configuration=false
+2. cache_type=none
+3. use_memory_mapped_buffers=true
+4. neostore.propertystore.db.index.keys.mapped_memory=500M 
+5. neostore.propertystore.db.index.mapped_memory=500M
+6. neostore.nodestore.db.mapped_memory=200M
+7. neostore.relationshipstore.db.mapped_memory=3G
+8. neostore.propertystore.db.mapped_memory=200M
+9. neostore.propertystore.db.strings.mapped_memory=500M
+10.  
+11. batch_import.nodes_files=nodes1.csv,nodes2.csv,nodes3.csv
+12. batch_import.rels_files=rels1.csv,rels2.csv,rels3.csv,rels4.csv
+13.  
+14. batch_import.node_index.users=exact
+15. batch_import.node_index.transactions=exact
+16. batch_import.node_index.pubkeys=exact
 
 Starting up Neo4j
 ---------------
