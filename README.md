@@ -24,7 +24,7 @@ Importing into Neo4j
 --------------
 Move your nodes[1,2,3].csv and rels[1,2,3,4].csv files to the [batch-import](https://github.com/jexp/batch-import/tree/20) file.
 
-Here is a sample configuration for batch.properties on a 6gb machine. The import will run faster if you remove auto-indexing (batch_import.node_index.*) 
+Here is a sample configuration for batch.properties on an 8gb machine. The import will run faster if you remove auto-indexing (batch_import.node_index.*) 
 
 1. dump_configuration=false
 2. cache_type=none
